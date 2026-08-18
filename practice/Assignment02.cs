@@ -4,6 +4,7 @@ class Program
 {
     public static void Main()
     {
+        //Assignment-02
         // Q1
         int birthYear = 2000;
         int currentYear = 2024;
@@ -200,6 +201,195 @@ class Program
         int handshakes = (numberOfStudents * (numberOfStudents - 1)) / 2;
         Console.WriteLine(
             "The maximum number of handshakes is " + handshakes
+        );
+
+        //Assignment-03
+        // Q1
+        int number1 = int.Parse(Console.ReadLine());
+        int number2 = int.Parse(Console.ReadLine());
+
+        int quotient = number1 / number2;
+        int remainder = number1 % number2;
+
+        Console.WriteLine(
+            "The Quotient is " + quotient +
+            " and Remainder is " + remainder +
+            " of two numbers " + number1 +
+            " and " + number2
+        );
+
+
+        // Q2
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        int c = int.Parse(Console.ReadLine());
+
+        int operation1 = a + b * c;
+        int operation2 = a * b + c;
+        int operation3 = c + a / b;
+        int operation4 = a % b + c;
+
+        Console.WriteLine(
+            "The results of Int Operations are " +
+            operation1 + ", " +
+            operation2 + ", " +
+            operation3 + ", and " +
+            operation4
+        );
+
+
+        // Q3
+        double doubleA = double.Parse(Console.ReadLine());
+        double doubleB = double.Parse(Console.ReadLine());
+        double doubleC = double.Parse(Console.ReadLine());
+
+        double doubleOperation1 = doubleA + doubleB * doubleC;
+        double doubleOperation2 = doubleA * doubleB + doubleC;
+        double doubleOperation3 = doubleC + doubleA / doubleB;
+        double doubleOperation4 = doubleA % doubleB + doubleC;
+
+        Console.WriteLine(
+            "The results of Double Operations are " +
+            doubleOperation1 + ", " +
+            doubleOperation2 + ", " +
+            doubleOperation3 + ", and " +
+            doubleOperation4
+        );
+
+
+        // Q4
+        double celsius = double.Parse(Console.ReadLine());
+
+        double fahrenheitResult = (celsius * 9 / 5) + 32;
+
+        Console.WriteLine(
+            "The " + celsius +
+            " Celsius is " + fahrenheitResult +
+            " Fahrenheit"
+        );
+
+
+        // Q5
+        double fahrenheit = double.Parse(Console.ReadLine());
+
+        double celsiusResult = (fahrenheit - 32) * 5 / 9;
+
+        Console.WriteLine(
+            "The " + fahrenheit +
+            " Fahrenheit is " + celsiusResult +
+            " Celsius"
+        );
+
+
+        // Q6
+        double salary = double.Parse(Console.ReadLine());
+        double bonus = double.Parse(Console.ReadLine());
+
+        double totalIncome = salary + bonus;
+
+        Console.WriteLine(
+            "The salary is INR " + salary +
+            " and bonus is INR " + bonus +
+            ". Hence Total Income is INR " + totalIncome
+        );
+
+
+        // Q7
+        int firstNumber = int.Parse(Console.ReadLine());
+        int secondNumber = int.Parse(Console.ReadLine());
+
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        Console.WriteLine(
+            "The swapped numbers are " +
+            firstNumber + " and " + secondNumber
+        );
+
+
+        // Q8
+        string name = Console.ReadLine();
+        string fromCity = Console.ReadLine();
+        string viaCity = Console.ReadLine();
+        string toCity = Console.ReadLine();
+
+        double fromToVia = double.Parse(Console.ReadLine());
+        double viaToFinalCity = double.Parse(Console.ReadLine());
+        double timeTaken = double.Parse(Console.ReadLine());
+
+        double totalDistance = fromToVia + viaToFinalCity;
+
+        Console.WriteLine(
+            "The results of the trip are: " +
+            name + ", " +
+            totalDistance + " miles, and " +
+            timeTaken + " hours"
+        );
+
+
+        // Q9
+        double side1 = double.Parse(Console.ReadLine());
+        double side2 = double.Parse(Console.ReadLine());
+        double side3 = double.Parse(Console.ReadLine());
+
+        double perimeter = side1 + side2 + side3;
+
+        double totalDistanceMeters = 5000;
+        double rounds = totalDistanceMeters / perimeter;
+
+        Console.WriteLine(
+            "The total number of rounds the athlete will run is " +
+            rounds +
+            " to complete 5 km"
+        );
+
+
+        // Q10
+        int numberOfChocolates = int.Parse(Console.ReadLine());
+        int numberOfChildren = int.Parse(Console.ReadLine());
+
+        int chocolatesPerChild = numberOfChocolates / numberOfChildren;
+
+        int remainingChocolates = numberOfChocolates % numberOfChildren;
+
+        Console.WriteLine(
+            "The number of chocolates each child gets is " +
+            chocolatesPerChild +
+            " and the number of remaining chocolates is " +
+            remainingChocolates
+        );
+
+
+        // Q11
+        double principal = double.Parse(Console.ReadLine());
+        double rate = double.Parse(Console.ReadLine());
+        double time = double.Parse(Console.ReadLine());
+
+        double simpleInterest = (principal * rate * time) / 100;
+
+        Console.WriteLine(
+            "The Simple Interest is " +
+            simpleInterest +
+            " for Principal " +
+            principal +
+            ", Rate of Interest " +
+            rate +
+            " and Time " +
+            time
+        );
+
+
+        // Q12
+        double weight = double.Parse(Console.ReadLine());
+
+        double weightInKg = weight * 2.2;
+
+        Console.WriteLine(
+            "The weight of the person in pounds is " +
+            weight +
+            " and in kg is " +
+            weightInKg
         );
     }
 }
