@@ -205,11 +205,11 @@ class Program
 
         //Assignment-03
         // Q1
-        int number1 = int.Parse(Console.ReadLine());
-        int number2 = int.Parse(Console.ReadLine());
+        int n1 = int.Parse(Console.ReadLine());
+        int n2 = int.Parse(Console.ReadLine());
 
-        int quotient = number1 / number2;
-        int remainder = number1 % number2;
+        int quotient = n1 / n2;
+        int remainder = n1 % n2;
 
         Console.WriteLine(
             "The Quotient is " + quotient +
@@ -333,10 +333,10 @@ class Program
         double side2 = double.Parse(Console.ReadLine());
         double side3 = double.Parse(Console.ReadLine());
 
-        double perimeter = side1 + side2 + side3;
+        double perim = side1 + side2 + side3;
 
         double totalDistanceMeters = 5000;
-        double rounds = totalDistanceMeters / perimeter;
+        double rounds = totalDistanceMeters / perim;
 
         Console.WriteLine(
             "The total number of rounds the athlete will run is " +
