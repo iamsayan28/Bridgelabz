@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="Assignments/Basic-Assignments/Basic-Assignments.csproj" Id="a78d449e-69ff-487a-af83-f78f8d131d26" />
+  <Project Path="Assignments/Generic-Assignments/Generic-Assignments.csproj" Id="898c9e41-9060-4e84-8bf8-d31b37096168" />
+  <Project Path="Assignments/OOP-Assignment/OOP-Assignment.csproj" Id="fa9fa997-b03f-4b98-8e96-718e703d5f71" />
   <Project Path="practice/practice.csproj" Id="590243b3-9517-4262-a5a3-b77997ed36ed" />
 </Solution>

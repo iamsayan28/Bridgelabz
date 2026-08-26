@@ -54,3 +54,24 @@
 //    }
 //}
 
+
+using System.Collections.Immutable;
+
+//List<int> list = new List<int>(){ 1, 2, 3};
+//ImmutableList<int> list1 = new List<int>() { 1, 2, 3 }.ToImmutableList();
+//list1.Add(4);
+
+SortedSet<string> set = new SortedSet<string>(StringComparer.OrdinalIgnoreCase);
+
+set.Add("HELLO");
+set.Add("hello");
+
+
+foreach (string i in set)
+{
+    Console.WriteLine(i);
+}
+
+IEnumerable<int> numbers = new List<int>();
+
+IEnumerable<object> objects = numbers;

@@ -166,7 +166,6 @@ class OopProblems
         EMS.FullTimeEmployee fte = new EMS.FullTimeEmployee(101, "Alice", 60000, 5000);
         fte.Name = "Sayan";
         fte.DisplayDetails();
-
         //2
         ECommerce.Clothing cloth1 = new ECommerce.Clothing(1, "raymond", 2500);
         cloth1.Price = 1500;
