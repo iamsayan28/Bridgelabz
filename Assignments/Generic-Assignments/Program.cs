@@ -53,6 +53,60 @@ class Storage<T> where T : WarehouseItem
     }
 }
 
+
+// 2. Dynamic Online Marketplace
+abstract class ProductCategory
+{
+    public string Name { get; }
+
+    protected ProductCategory(string name)
+    {
+        Name = name;
+    }
+}
+
+class BookCategory : ProductCategory
+{
+    public BookCategory(string name) : base(name)
+    {
+    }
+}
+
+class ClothingCategory : ProductCategory
+{
+    public ClothingCategory(string name) : base(name)
+    {
+    }
+}
+
+class Product<T> where T : ProductCategory
+{
+    public string ProductName { get; }
+    public double Price { get; set; }
+    public T Category { get; }
+
+    public Product(string productName, double price, T category)
+    {
+        ProductName = productName;
+        Price = price;
+        Category = category;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"{ProductName}, Category: {Category.Name}, Price: {Price}");
+    }
+}
+class Marketplace
+{
+    public void ApplyDiscount<T>(Product<T> product, double percentage)
+        where T : ProductCategory
+    {
+        product.Price -= product.Price * percentage / 100;
+    }
+}
+
+// MAIN 
 class GenericsAssignment
 {
     static void Main(string[] args)
@@ -79,5 +133,30 @@ class GenericsAssignment
         
         warehouseStorage.DisplayItems(warehouseItems);
         electronicsStorage.DisplayItems(eItems);
+
+        // 2.
+        BookCategory programmingBook = new BookCategory("Programming Books");
+
+        ClothingCategory mensClothing = new ClothingCategory("Men's Clothing");
+
+        Product<BookCategory> book = new Product<BookCategory>("C# Fundamentals", 500, programmingBook);
+        Product<ClothingCategory> shirt = new Product<ClothingCategory>("Cotton Shirt",800, mensClothing);
+
+        Console.WriteLine("ONLINE MARKETPLACE");
+        Console.WriteLine();
+
+        book.Display();
+        shirt.Display();
+
+        Marketplace marketplace = new Marketplace();
+
+        marketplace.ApplyDiscount(book, 10);
+        marketplace.ApplyDiscount(shirt, 20);
+
+        Console.WriteLine();
+        Console.WriteLine("After Discount:");
+
+        book.Display();
+        shirt.Display();
     }
 }
