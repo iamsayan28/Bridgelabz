@@ -2,5 +2,12 @@
   <Project Path="Assignments/Basic-Assignments/Basic-Assignments.csproj" Id="a78d449e-69ff-487a-af83-f78f8d131d26" />
   <Project Path="Assignments/Generic-Assignments/Generic-Assignments.csproj" Id="898c9e41-9060-4e84-8bf8-d31b37096168" />
   <Project Path="Assignments/OOP-Assignment/OOP-Assignment.csproj" Id="fa9fa997-b03f-4b98-8e96-718e703d5f71" />
+  <Project Path="LogAnalyzerStreams/LogAnalyzerStreams.csproj" Id="fcb33289-3082-462d-9f78-c47171effcc6" />
+  <Project Path="MyAppForNUnit/MyAppForNUnit.csproj" Id="09adde97-76d7-4a93-a96e-4b3534f6f460" />
+  <Project Path="MyNUnit/MyNUnit.csproj" Id="af7e827a-8079-402c-8b4c-ae84ba42fcb9" />
+  <Project Path="Practice/AttributesPractice/AttributesPractice.csproj" Id="b2243c1c-3282-47ed-8e6f-ffd35f065bcf" />
+  <Project Path="Practice/DataIngestionService.Tests/DataIngestionService.Tests.csproj" Id="4c0fdb4f-f29d-4261-a2c6-1b721d0b30d3" />
+  <Project Path="Practice/DataInjetionAndValidationPipeline/DataInjetionAndValidationPipeline.csproj" Id="3a3c0f5e-2a6a-4f66-987b-24574f29d9df" />
+  <Project Path="Practice/MiniMart/MiniMart.csproj" Id="7b2d73b4-92a2-4908-817e-a1e7f19d9dec" />
   <Project Path="practice/practice.csproj" Id="590243b3-9517-4262-a5a3-b77997ed36ed" />
 </Solution>
