@@ -1,0 +1,4 @@
+interface IAttributeValidator
+{
+    void ValidateObjectAttribute();
+}

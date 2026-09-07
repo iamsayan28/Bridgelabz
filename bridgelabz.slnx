@@ -9,5 +9,6 @@
   <Project Path="Practice/DataIngestionService.Tests/DataIngestionService.Tests.csproj" Id="4c0fdb4f-f29d-4261-a2c6-1b721d0b30d3" />
   <Project Path="Practice/DataInjetionAndValidationPipeline/DataInjetionAndValidationPipeline.csproj" Id="3a3c0f5e-2a6a-4f66-987b-24574f29d9df" />
   <Project Path="Practice/MiniMart/MiniMart.csproj" Id="7b2d73b4-92a2-4908-817e-a1e7f19d9dec" />
+  <Project Path="Practice/PluggableJobExecution/pge.csproj" Id="47234d1b-2804-482b-b1f3-2cbec0f63a5f" />
   <Project Path="practice/practice.csproj" Id="590243b3-9517-4262-a5a3-b77997ed36ed" />
 </Solution>
