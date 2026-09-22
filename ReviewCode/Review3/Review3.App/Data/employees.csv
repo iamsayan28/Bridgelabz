@@ -1,0 +1,3 @@
+EmployeeId,Name,Email,Department,Designation,Salary,JoiningDate,EmploymentType,Status
+101,John Doe,john.doe@example.com,IT,Developer,75000,2023-05-10,FullTime,Active
+102,Jane Smith,jane.smith@example.com,HR,Manager,65000,2022-03-15,FullTime,Active
