@@ -263,13 +263,11 @@ public class Program
         Console.WriteLine();
         Console.WriteLine("===== CACHE RESULT =====");
 
-        MethodInfo expensiveMethod =
-            programType.GetMethod("ExpensiveCalculation");
+        MethodInfo expensiveMethod = programType.GetMethod("ExpensiveCalculation");
 
         Console.WriteLine("First call:");
 
-        object result1 =
-            InvokeWithCache(expensiveMethod, 10);
+        object result1 = InvokeWithCache(expensiveMethod, 10);
 
         Console.WriteLine("Result: " + result1);
 
@@ -277,8 +275,7 @@ public class Program
 
         Console.WriteLine("Second call with same input:");
 
-        object result2 =
-            InvokeWithCache(expensiveMethod, 10);
+        object result2 = InvokeWithCache(expensiveMethod, 10);
 
         Console.WriteLine("Result: " + result2);
 
@@ -286,11 +283,13 @@ public class Program
 
         Console.WriteLine("Third call with different input:");
 
-        object result3 =
-            InvokeWithCache(expensiveMethod, 20);
+        object result3 = InvokeWithCache(expensiveMethod, 20);
 
         Console.WriteLine("Result: " + result3);
     }
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
 
     // EXERCISE 3 HELPER
     public static void InvokeWithExecutionTime(MethodInfo method)
@@ -398,15 +397,11 @@ public class Program
     }
 
     // EXERCISE 7 HELPER
-    static Dictionary<string, object> cache =
-        new Dictionary<string, object>();
+    static Dictionary<string, object> cache = new Dictionary<string, object>();
 
-    public static object InvokeWithCache(
-        MethodInfo method,
-        params object[] parameters)
+    public static object InvokeWithCache( MethodInfo method, params object[] parameters)
     {
-        CacheResultAttribute attribute =
-            method.GetCustomAttribute<CacheResultAttribute>();
+        CacheResultAttribute attribute = method.GetCustomAttribute<CacheResultAttribute>();
 
         if (attribute == null)
         {
@@ -423,7 +418,7 @@ public class Program
         if (cache.ContainsKey(key))
         {
             Console.WriteLine("Returning cached result...");
-
+            Console.WriteLine(key);
             return cache[key];
         }
 
