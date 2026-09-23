@@ -7,7 +7,7 @@ public class EmployeeValidator
         var context = new ValidationContext(employee);
         var results = new List<ValidationResult>();
 
-        bool isValid = System.ComponentModel.DataAnnotations.Validator.TryValidateObject(
+        bool isValid = Validator.TryValidateObject(
             employee, context, results, validateAllProperties: true
         );
 

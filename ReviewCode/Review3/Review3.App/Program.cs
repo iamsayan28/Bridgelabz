@@ -2,7 +2,7 @@
 {
     static void Main(string[] args)
     {
-        string conn = "Server=localhost;Port=3306;Database=EmployeeComplianceDB;User ID=root;Password=sayan@2005;";
+        string conn = "Server=localhost;Port=3306;Database=EmployeeComplianceDB;User ID=root;Password=Sayan@2005;";
         IRepository repo = new MySqlRepository(conn);
         var processor = new FileProcessor(repo, new EmployeeValidator());
         var reporter = new AuditReporter();
