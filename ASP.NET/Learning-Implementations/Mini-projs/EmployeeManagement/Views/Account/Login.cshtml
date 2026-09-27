@@ -1,0 +1,30 @@
+@model LoginModel
+@{
+    ViewBag.PageTitle = "Login";
+}
+
+<h2>Login</h2>
+
+<div asp-validation-summary="All"></div>
+
+<form asp-controller="Account" asp-action="Login" method="post">
+    <p>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </p>
+    <p>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </p>
+    <p>
+        <button type="submit">Login</button>
+    </p>
+</form>
+
+<p>(Sample login from seed data: admin / admin123)</p>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

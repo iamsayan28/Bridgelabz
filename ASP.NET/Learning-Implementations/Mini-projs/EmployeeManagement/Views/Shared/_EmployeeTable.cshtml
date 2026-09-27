@@ -1,0 +1,39 @@
+@model List<Employee>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Date of Joining</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.EmployeeCode</td>
+                <td>@emp.FirstName @emp.LastName</td>
+                <td>@emp.Email</td>
+                <td>@emp.Department</td>
+                <td>@emp.Designation</td>
+                <td>@emp.Salary</td>
+                <td>@emp.DateOfJoining.ToShortDateString()</td>
+                <td>
+                    <a asp-controller="Employee" asp-action="Details" asp-route-id="@emp.EmployeeId">View</a>
+                    |
+                    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.EmployeeId">Edit</a>
+                    |
+                    <form asp-controller="Employee" asp-action="Delete" asp-route-id="@emp.EmployeeId" method="post" class="delete-form">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+@using Microsoft.AspNetCore.Http;
+
+@{
+    string loggedInUser = Context.Session.GetString("Username");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@(ViewBag.PageTitle ?? "Employee Management System")</title>
+</head>
+<body>
+
+    <header>
+        <h1>Employee Management System</h1>
+        <nav>
+            <a asp-controller="Employee" asp-action="Index">Home</a>
+            |
+            <a asp-controller="Employee" asp-action="Index">Employee</a>
+            @if (!string.IsNullOrEmpty(loggedInUser))
+            {
+                <text> | Logged in as: <strong>@loggedInUser</strong> | <a asp-controller="Account" asp-action="Logout">Logout</a></text>
+            }
+        </nav>
+    </header>
+
+    <hr />
+
+    <main>
+        @if (TempData["Message"] != null)
+        {
+            <p id="tempMessage"><strong>@TempData["Message"]</strong></p>
+        }
+
+        @RenderBody()
+    </main>
+
+    <hr />
+
+    <footer>
+        <p>Employee Management System (Learning Project) - @DateTime.Now.Year</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>

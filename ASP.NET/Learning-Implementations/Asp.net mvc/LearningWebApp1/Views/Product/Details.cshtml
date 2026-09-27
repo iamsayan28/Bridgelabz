@@ -1,0 +1,19 @@
+@model LearningWebApp1.Models.Product
+    <h1> Product Details: </h1>
+
+    <h2> Product Name : @Model.Name </h2>
+    <p> Product Price: @Model.Price </p> @* commments?? *@
+
+    <h1>Different format: </h1>
+    <div class="panel panel-default p-3 shadow-sm">
+        <dl class="dl-horizontal">
+            <dt>Product ID:</dt>
+            <dd>@Model.Id</dd>
+
+            <dt>Name:</dt>
+            <dd>@Model.Name</dd>
+
+            <dt>Price:</dt>
+            <dd>@Model.Price.ToString("C")</dd>
+        </dl>
+    </div>
